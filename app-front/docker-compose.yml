@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+        front0:
+                container_name: front0
+                restart: always
+                build: .
+                ports:
+                    - "8080:8080"
+                volumes:
+                        - .:/app
+

@@ -1,0 +1,26 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.9.0",
+    "ajv-errors": "^3.0.0",
+    "ajv-formats": "^2.1.1",
+    "ajv-keywords": "^5.1.0",
+    "ckey": "^1.0.3",
+    "csv-parser": "^3.0.0",
+    "http": "^0.0.1-security",
+    "http-cors": "^2.0.0",
+    "jsonschema": "^1.4.0",
+    "mongodb": "^4.3.1",
+    "nodemon": "^2.0.15"
+  }
+}
