@@ -1,7 +1,5 @@
 const { getUsers } = require('../models/get-data'); 
 
-const incomingEmails = [];
-const emailsInDataBase = [];
 const control = emails => emails === true;
 const list = [];
 
@@ -9,13 +7,9 @@ module.exports = async incomingUsersList => {
 	
 	const usersInDataBase = await getUsers();
 	
-	for(let IE = 0; IE < incomingUsersList.length; IE++) {
-		incomingEmails.push(incomingUsersList[IE].email);
-	};
+	const incomingEmails = incomingUsersList.map(user => user.email);
 
-	for(let EDB = 0; EDB < usersInDataBase.length; EDB++) {
-		emailsInDataBase.push(usersInDataBase[EDB].email);
-	};
+	const emailsInDataBase = usersInDataBase.map(user => user.email);
 
 	const checkIfEmailExists = incomingEmails.map(email => {
 		list.push(emailsInDataBase.includes(email));
