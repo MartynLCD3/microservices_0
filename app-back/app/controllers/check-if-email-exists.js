@@ -6,9 +6,7 @@ const list = [];
 module.exports = async incomingUsersList => {
 	
 	const usersInDataBase = await getUsers();
-	
 	const incomingEmails = incomingUsersList.map(user => user.email);
-
 	const emailsInDataBase = usersInDataBase.map(user => user.email);
 
 	const checkIfEmailExists = incomingEmails.map(email => {
